@@ -1,0 +1,38 @@
+<idea-plugin>
+    <id>com.maqv.code.generator</id>
+    <name>Maqv Database Generator</name>
+    <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+
+    <description><![CDATA[
+    Enter short description for your plugin here.<br>
+    <em>most HTML tags may be used</em>
+    ]]></description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+
+        <group id="Maqv.Code.Generate" text="玛曲代码生成" popup="true">
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
+        </group>
+
+        <action id="maqv DB Generate" class="com.maqv.code.generator.action.DbGenerateAction"
+                text="实体类生成" description="文件名必须是maqvConfig.properties">
+            <add-to-group group-id="Maqv.Code.Generate" anchor="first"></add-to-group>
+        </action>
+
+        <action id="maqv service controller Generate" class="com.maqv.code.generator.action.ControllerServiceTemplateAction"                              text="ServiceController模板" description="ServiceController模板">
+            <add-to-group group-id="Maqv.Code.Generate" anchor="after" relative-to-action="maqv DB Generate"></add-to-group>
+        </action>
+
+    </actions>
+</idea-plugin>

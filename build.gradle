@@ -1,0 +1,34 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.intellij' version '0.4.11'
+}
+
+group 'com.maqv.gradle'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.18'
+    annotationProcessor 'org.projectlombok:lombok:1.18.2'
+    compileOnly 'org.projectlombok:lombok:1.18.10'
+    annotationProcessor 'org.projectlombok:lombok:1.18.10'
+    compile "org.antlr:antlr4-intellij-adaptor:0.1"
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.9'
+}
+
+intellij {
+    version '2018.2.5'
+}
+patchPluginXml {
+    changeNotes """
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>"""
+}
