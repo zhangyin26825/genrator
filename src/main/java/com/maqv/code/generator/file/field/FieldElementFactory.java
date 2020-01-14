@@ -14,7 +14,7 @@ import java.util.List;
 public interface  FieldElementFactory extends ColumnFieldFactory{
 
     default String fieldComment(Column column){
-       return JavaCodeElement.comment(column.getComment());
+        return JavaCodeElement.comment(column.getComment());
     }
 
     List<String> fieldAnnotation(Column column);
