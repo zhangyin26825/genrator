@@ -2,7 +2,6 @@ package com.maqv.code.generator.file.source;
 
 import com.maqv.code.generator.file.config.PackageConfig;
 import com.maqv.code.generator.file.source.impl.ColumnJavaFilePath;
-import com.maqv.code.generator.file.source.impl.SingleTableJavaFilePath;
 import com.maqv.code.generator.file.source.impl.TableJavaFilePath;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -24,9 +23,6 @@ public enum ClassType {
     ServiceImpl(new TableJavaFilePath(PackageConfig.ServiceImpl),false),
     Controller(new TableJavaFilePath(PackageConfig.Controller),false),
     ErrorCode(new TableJavaFilePath(PackageConfig.ErrorCode),false),
-
-    SubParam(new SingleTableJavaFilePath(PackageConfig.SubParam),false),
-    Dto(new SingleTableJavaFilePath(PackageConfig.Dto),false),
     ;
 
     private JavaBaseFilePath javaBaseFilePath;
