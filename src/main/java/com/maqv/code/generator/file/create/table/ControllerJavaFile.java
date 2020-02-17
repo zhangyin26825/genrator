@@ -20,7 +20,7 @@ public class ControllerJavaFile extends BaseTableJavaClassFile {
         addAnnotation("@RequestMapping(\"{version}/api/"+getEntityName().toLowerCase()+"\")");
         addAnnotation("@Validated");
         addAnnotation("@Api(tags ="+JavaCodeElement.doubleQuotes(getTableComment())+")");
-        addClassComment("controller for"+getTableName());
+        addClassComment("controller for "+getTableName());
     }
 
     @Override

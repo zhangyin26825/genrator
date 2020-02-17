@@ -23,6 +23,7 @@ public enum ClassType {
     ServiceImpl(new TableJavaFilePath(PackageConfig.ServiceImpl),false),
     Controller(new TableJavaFilePath(PackageConfig.Controller),false),
     ErrorCode(new TableJavaFilePath(PackageConfig.ErrorCode),false),
+
     ;
 
     private JavaBaseFilePath javaBaseFilePath;

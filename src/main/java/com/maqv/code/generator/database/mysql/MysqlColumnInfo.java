@@ -79,6 +79,7 @@ public class MysqlColumnInfo {
         }else {
             switch (dataType){
                 case "int":
+                case "tinyint":
                     return new IntegerValueType();
                 case "varchar":
                 case "text":

@@ -59,7 +59,7 @@ public enum PackageConfig {
     /**
      * SubParam
      */
-    SubParam(PropertiesKey.ServiceKey,false,"param","SubParam"),
+    param(PropertiesKey.ServiceKey,false,"param","Param"),
     /**
      * DTO
      */
